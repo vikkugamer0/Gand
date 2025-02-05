@@ -7,9 +7,9 @@ import string
 import json
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8161162194:AAGTYOQzotkWzDOIGu6VJHaWFciL9YcLxsc')
+bot = telebot.TeleBot('7452801234:AAGSsFGCRxoQzzQ9G_0zBXfIuS9AplGSqzw')
 # Admin user IDs
-admin_id = {'6329099426'}
+admin_id = {'6957116305'}
 
 # Files for data storage
 USER_FILE = "users.json"
@@ -161,7 +161,7 @@ def handle_bgmi(message):
                 time_since_last_attack = (datetime.datetime.now() - bgmi_cooldown[user_id]).seconds
                 if time_since_last_attack < COOLDOWN_TIME:
                     cooldown_remaining = COOLDOWN_TIME - time_since_last_attack
-                    response = f"𝐖𝐚𝐢𝐭 𝐊𝐫𝐥𝐞 𝐋𝐚𝐰𝐝𝐞 {cooldown_remaining} 𝐒𝐞𝐜𝐨𝐧𝐝 𝐛𝐚𝐚𝐝  /bgmi 𝐔𝐬𝐞 𝐤𝐫𝐧𝐚."
+                    response = f"𝐖𝐚𝐢𝐭 𝐊𝐫𝐥𝐞 𝐋𝐚𝐰𝐝𝐞 {cooldown_remaining} 𝐒𝐞𝐜𝐨𝐧𝐝 𝐛𝐚𝐚𝐝  /Vikku 𝐔𝐬𝐞 𝐤𝐫𝐧𝐚."
                     bot.reply_to(message, response)
                     return
                 
@@ -183,7 +183,7 @@ def handle_bgmi(message):
             try:
                 port = int(command[2])
                 time = int(command[3])
-                if time > 200:
+                if time > 300:
                     response = "⚠️𝐄𝐑𝐑𝐎𝐑:200 𝐒𝐄 𝐓𝐇𝐎𝐃𝐀 𝐊𝐀𝐌 𝐓𝐈𝐌𝐄 𝐃𝐀𝐀𝐋 𝐆𝐀𝐍𝐃𝐔."
                 else: 
                     record_command_logs(user_id, '/bgmi', target, port, time)
@@ -195,7 +195,7 @@ def handle_bgmi(message):
             except ValueError:
                 response = "𝐄𝐑𝐑𝐎𝐑»𝐈𝐏 𝐏𝐎𝐑𝐓 𝐓𝐇𝐈𝐊 𝐒𝐄 𝐃𝐀𝐀𝐋 𝐂𝐇𝐔𝐓𝐘𝐄"
         else:
-            response = "✅Usage: /bgmi <target> <port> <time>"
+            response = "✅Usage: /vikku <target> <port> <time>"
     else:
         response = "𝐁𝐒𝐃𝐊 𝐆𝐀𝐑𝐄𝐄𝐁 𝐀𝐂𝐂𝐄𝐒𝐒 𝐍𝐀𝐇𝐈 𝐇 𝐓𝐄𝐑𝐏𝐄"
 
